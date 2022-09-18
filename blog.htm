@@ -1,121 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#03071E" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#03071E" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#03071E" />
+    <title>Rehan Rangrez</title>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- Chrome, Firefox OS and Opera -->
-        <meta name="theme-color" content="#03071E">
-        <!-- Windows Phone -->
-        <meta name="msapplication-navbutton-color" content="#03071E">
-        <!-- iOS Safari -->
-        <meta name="apple-mobile-web-app-status-bar-style" content="#03071E">
-        <title>Document</title>
-        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap"
-            rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap"
-            rel="stylesheet">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
-            integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/CSSRulePlugin.min.js"
-            integrity="sha512-Qsi1/wzhv/tTbglg9qVSOoI8Tm/aQEBjhGszeFo86w9w7+VyCPU6aSm72ActHflic7o5zATaceSn9CW+EshtJg=="
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-        <link rel="stylesheet" href="styles/style3.css">
-    </head>
+    <!-- FOnts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat+Subrayada&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FOnts -->
 
-    <body onload="main()">
-        <div class="blog">
-            <div class="totop">
-                ↑
-            </div>
-            <div class="bloghead ">
-                <div class="backtohome">
-                    <a href="index.htm"> Back to home</a>
-                </div>
-                <h1>Medini's Blog</h1>
-                <img src="images/Group 1.svg" id="blogsvg" alt="">
-            </div>
-            <div class="thumbnail1 thumbnail">
-                <div class="title1 title">
-                    Why Copywriters Should Learn UX
-                </div>
-            </div>
-            <div class="thumbnail2 thumbnail">
-                <div class="title2 title">
-                    developing a video strategy that will change your business.
-                </div>
-            </div>
-            <div class="thumbnail3 thumbnail">
-                <div class="title3 title">
-                    Why Copywriters Should Learn UX
-                </div>
-            </div>
-            <div class="thumbnail4 thumbnail">
-                <div class="title4 title">
-                    five newsroom tips for better website content
-                </div>
-            </div>
-            <div class="thumbnail5 thumbnail">
-                <div class="title5 title">
-                    Five apps to try now
-                </div>
-            </div>
-        </div>
-        <footer>
-            ©2020 Medini
-            Demo or it didn't happen.
-        </footer>
-        <div class="footer2">
-            adiós amigo
-        </div>
-        <script>
-            function main() {
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"
+      integrity="sha512-pCPP9sfLW9T7EZiw725jUl+ux032sjGhFE+ZAx00C1iO55ZmZJWpfNGbDf2ZF5b0UqxRqSW548PbZEWmH+S7pA=="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/CSSRulePlugin.min.js"
+      integrity="sha512-Qsi1/wzhv/tTbglg9qVSOoI8Tm/aQEBjhGszeFo86w9w7+VyCPU6aSm72ActHflic7o5zATaceSn9CW+EshtJg=="
+      crossorigin="anonymous"
+    ></script> -->
+    <!-- Typed js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
 
-                const totop = document.querySelector('.totop');
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style3.css" />
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  </head>
 
-                function totopp() {
-                    let scrolloptions = {
-                        top: '0',
-                        behavior: 'smooth'
-                    }
-                    window.scrollTo(scrolloptions);
-                };
-                totop.addEventListener('click', totopp);
-                const thumbnail1 = document.querySelector('.thumbnail1');
-                let observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(entry => {
-                        if (!entry.isIntersecting) {
-                            totop.style.display = 'flex';
-                        } else {
-                            totop.style.display = 'none';
-                        }
-                    })
-                });
-                observer.observe(thumbnail1);
-                const bloghead = document.querySelector('.bloghead');
-                let observer2 = new IntersectionObserver(function (entries1) {
-                    entries1.forEach(entry1 => {
-                        if (entry1.isIntersecting) {
-                            var rule2 = CSSRulePlugin.getRule(".blog .bloghead h1:after");
-                            TweenMax.to(rule2, 1, {
-                                cssRule: {
-                                    y: 100,
-                                    opacity: .2,
-                                    ease: "bounce.out"
-                                },
-                            });
+  <body onload="main()">
+    <div class="backtohome">
+      <a href="index.htm"> <img src="images/home-icon.svg" alt="" /></a>
+    </div>
+    <div class="main-wrap">
+      <header>
+        <h1>Projects</h1>
+      </header>
 
-                        } else {
-                            return;
-                        }
-                    })
-                });
-                observer2.observe(bloghead);
+      <ul class="project-container">
+        <li class="project" data-aos="fade-up" id="snips" data-aos-anchor-placement="top-bottom">
+          <div class="img-container">
+            <!-- <img src="https://source.unsplash.com/random/?code" alt=""> -->
+          </div>
+          <div class="description-container">
+            <h2 class="project-title">SNIPS - Code snippets</h2>
+            <p class="project-description">
+              A fully responsive progressive web application for open source
+              code snippets.
+            </p>
+            <ul class="technologies-used-container">
+              <li class="technology"><p>HTML</p></li>
+              <li class="technology"><p>CSS</p></li>
+              <li class="technology"><p>SASS</p></li>
+              <li class="technology"><p>Javascript</p></li>
+              <li class="technology"><p>Github</p></li>
+              <li class="technology"><p>VS Code</p></li>
+            </ul>
+            <div class="check-out">
+              <a href="#"><img src="images/checkout-icon.svg" alt="" /></a>
+            </div>
+          </div>
+        </li>
+        <li class="project" data-aos="fade-up" id="recipe" data-aos-anchor-placement="top-bottom">
+          <div class="img-container">
+            <!-- <img src="https://source.unsplash.com/random/?code" alt=""> -->
+          </div>
+          <div class="description-container">
+            <h2 class="project-title">Recipe</h2>
+            <p class="project-description">
+              A mobile based prograssive web application for providing users
+              with recipes using API.
+            </p>
+            <ul class="technologies-used-container">
+              <li class="technology"><p>HTML</p></li>
+              <li class="technology"><p>CSS</p></li>
+              <li class="technology"><p>Javascript</p></li>
+              <li class="technology"><p>Github</p></li>
+              <li class="technology"><p>Edamam API</p></li>
+              <li class="technology"><p>VS Code</p></li>
+            </ul>
+            <div class="check-out">
+              <a href="#"><img src="images/checkout-icon.svg" alt="" /></a>
+            </div>
+          </div>
+        </li>
+        <li class="project" data-aos="fade-up" id="coxy" data-aos-anchor-placement="top-bottom">
+          <div class="img-container">
+            <!-- <img src="https://source.unsplash.com/random/?code" alt=""> -->
+          </div>
+          <div class="description-container">
+            <h2 class="project-title">Coxy - The Digital School</h2>
+            <p class="project-description">
+              A fully responsive website for a digital marketing training &
+              certification providing company.
+            </p>
+            <ul class="technologies-used-container">
+              <li class="technology"><p>HTML</p></li>
+              <li class="technology"><p>CSS</p></li>
+              <li class="technology"><p>BOOTSTRAP</p></li>
+              <li class="technology"><p>CodeSandbox</p></li>
+              <li class="technology"><p>Github</p></li>
+              <li class="technology"><p>VS Code</p></li>
+            </ul>
+            <div class="check-out">
+              <a href="#"><img src="images/checkout-icon.svg" alt="" /></a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="totop">↑</div>
+
+    <footer>
+      <p class="copyright">Designed and Built by Rehan Rangrez <br /></p>
+    </footer>
+
+    <script>
+      AOS.init();
+
+
+      function main() {
+        const totop = document.querySelector(".totop");
+
+        function totopp() {
+          let scrolloptions = {
+            top: "0",
+            behavior: "smooth",
+          };
+          window.scrollTo(scrolloptions);
+        }
+        totop.addEventListener("click", totopp);
+        const snips = document.querySelector("#snips");
+        let observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+              totop.style.display = "flex";
+            } else {
+              totop.style.display = "none";
             }
-        </script>
-    </body>
+          });
+        });
+        observer.observe(snips);
 
+        // const bloghead = document.querySelector('.bloghead');
+        // let observer2 = new IntersectionObserver(function (entries1) {
+        //     entries1.forEach(entry1 => {
+        //         if (entry1.isIntersecting) {
+        //             var rule2 = CSSRulePlugin.getRule(".blog .bloghead h1:after");
+        //             TweenMax.to(rule2, 1, {
+        //                 cssRule: {
+        //                     y: 100,
+        //                     opacity: .2,
+        //                     ease: "bounce.out"
+        //                 },
+        //             });
+
+        //         } else {
+        //             return;
+        //         }
+        //     })
+        // });
+        // observer2.observe(bloghead);
+      }
+    </script>
+  </body>
 </html>
